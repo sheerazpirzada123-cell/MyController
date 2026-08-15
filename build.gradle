@@ -1,20 +1,16 @@
-buildscript {
-    repositories {
-        google()
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'com.android.tools.build:gradle:8.1.0'
-    }
+plugins {
+    id 'com.android.application'
 }
 
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
-}
+android {
+    namespace 'com.test.controller'
+    compileSdk 33
 
-task clean(type: Delete) {
-    delete rootProject.buildDir
+    defaultConfig {
+        applicationId "com.test.controller"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
 }
